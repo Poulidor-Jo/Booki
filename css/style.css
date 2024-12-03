@@ -581,7 +581,7 @@
     .offers__main,
     .offers__spensored {
       width: 100%;
-      margin: 0;
+      margin: 20px 0px;
       padding: 42px 40px;
     }
   

@@ -250,8 +250,8 @@
       (2 * (100% - 40px)) / 3
     ); /* Deux tiers de l'espace total moins 40px d'espacement */
     padding: 34px 44px 46px 36px;
-    background-color: #f2f2f2;
-    border-radius: 20px;;
+    background-color:var(--grey);
+    border-radius: 20px;
   }
   
   .offers__main h2 {
@@ -261,7 +261,7 @@
   .card__main {
     width: calc(100% / 3);
     border: 5px solid #ffffff;
-    background-color: #f2f2f2;
+    background-color: white;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     cursor: pointer;
@@ -292,7 +292,11 @@
     margin: -2px;
     font-size: 14px;
   }
-  
+
+  .stars__container--main .star-empty{
+    color: var(--grey);
+  }
+
   .card__description--main {
     padding: 4px 0 6px 11px;
   }
@@ -307,7 +311,7 @@
   }
   
   .card__main:active {
-    transform: translateY(2px);/
+    transform: translateY(2px);
   }
   
   .show-more__btn {
@@ -346,7 +350,7 @@
     ); /* Un tiers de l'espace total moins 40px d'espacement */
     margin-left: 40px;
     padding: 41px 40px 1px 37px;
-    background-color: #f2f2f2;
+    background-color: var(--grey);
     border-radius: 20px;
   }
   
@@ -462,7 +466,7 @@
   }
 
   .card_description_activity h3 {
-    font: 700px 16px "Raleway" , sans-serif;
+    font: 700px 106px "Raleway" , sans-serif;
     padding: 20px 36px 21px 19px;
   }
 
@@ -476,6 +480,37 @@
   }
 
   /* FOOTER SECTION  */
+
+  footer {
+    display: flex;
+    padding: 45px 0px 24px 118px;
+    margin-bottom: 27px;
+    background-color: var(--grey);
+    border-radius: 15px;
+  }
+  
+  footer h3 {
+    font:  700 18px "Raleway", sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  .footer__column:nth-child(-n + 2) {
+    width: 30%;
+  }
+  
+  .link-list li:nth-child(-n + 2) {
+    margin-bottom: 12px;
+  }
+  
+  .link-list a {
+    text-decoration: none;
+    color: var(--black);
+    font:  400 16px "Raleway", sans-serif;
+  }
+  
+  .link-list a:hover {
+    text-decoration: underline;
+  }
 
   footer {
     display: flex;
@@ -504,4 +539,229 @@
   
   .link-list a:hover {
     text-decoration: underline;
+  }
+  /*----  End Footer ----*/
+  
+  /*---- MEDIA QUERIES ----*/
+  
+  /*----------  Tablettes  ----------*/
+  
+  @media (min-width: 769px) and (max-width: 992px) {
+    /*----------  Header  ----------*/
+  
+    header {
+      margin: 0px 30px 37px 30px;
+    }
+  
+    .input-search input {
+      font-size: 16px;
+    }
+  
+    .filter-bar__btns {
+      gap: 10px;
+    }
+  
+    .filter-bar__btn {
+      padding: 4px 16px;
+      font-size: 15px;
+    }
+  
+    .filter-bar {
+      gap: 10px;
+    }
+  
+    /*----------  Hébergements  ----------*/
+  
+    .offers {
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+  
+    .offers__main,
+    .offers__spensored {
+      width: 100%;
+      margin: 0;
+      padding: 42px 40px;
+    }
+  
+    .card__spensored--container{
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .card__spensored img {
+      width: 50%;
+    }
+    
+  
+  .card__description--spensored {
+    padding: 16px 22px 0px 15px;
+  
+  }
+  
+    .card__spensored:nth-child(-n + 2) {
+      margin-right: 23px;
+    }
+  
+    .card__spensored:nth-child(-n + 3) {
+      flex: 1;
+    }
+  
+    .card__description--spensored h3 {
+      font-size: 14px;
+    }
+  
+    .card__description--spensored p {
+      font-size: 13px;
+    }
+  
+    /*----------  Activités  ----------*/
+  
+    .card_activity:nth-child(-n + 3) {
+      margin-right: 38px;
+    }
+    .activities img {
+      height: 211px;
+    }
+    .activities h2 {
+      margin-bottom: 34px;
+    }
+  }
+  
+  /*----------  Téléphone mobile  ----------*/
+  
+  @media (max-width: 768px) {
+    /*----------  Header  ----------*/
+  
+    header {
+      margin: 10px;
+    }
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav__logo {
+      margin-top: 21px;
+      margin-bottom: 38px;
+    }
+  
+    nav ul {
+      width: 100%;
+      height: 50px;
+    }
+  
+    nav ul li {
+      width: 50%;
+    }
+  
+    nav li a:hover::before {
+      top: 100%;
+    }
+  
+    .search-bar__container {
+      margin: 0px 20px;
+    }
+  
+    .search-bar--button i {
+      display: block;
+    }
+  
+    .search-bar--button span {
+      display: none;
+    }
+  
+    .input-search {
+      width: 100%;
+    }
+  
+    .input-search input {
+      font-size: 16px;
+      width: 100%;
+    }
+    /*----------  Filter bar  ----------*/
+  
+    .filter-bar {
+      margin-top: 34px;
+      gap: 15px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .filter-bar__btns{
+      flex-wrap: wrap;
+      row-gap: 20px;
+      column-gap: 3%;
+      padding: 0;
+    }
+  
+    .filter-bar__btn{
+      flex: 1 1 47%;
+      font-size: 14px;
+      justify-content: flex-start;
+      padding: 4px 16px;
+    }
+  
+    
+    /*----------  Hébergements  ----------*/
+    
+    .offers {
+      flex-direction: column-reverse;
+      margin: 0 20px;
+    }
+  
+    .offers__spensored{
+      width: 100%;
+      margin: 80px 0;
+      padding: 0;
+    }
+  
+    .offers__main{
+      width: 100%;
+      padding: 0;
+    }
+  
+    .first-row , .second-row{
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .card__main{
+      width: 100%;
+    }
+  
+    
+    /*----------  Activités à marseille  ----------*/
+    
+    .activities{
+      margin: 80px 20px 0 20px;
+    }
+    .activities_row {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .card_activity{
+      width: 100%;
+      height:190px ;
+    }
+  
+    .activities img{
+      height: 124px;
+    }
+  
+    
+    /*----------  Footer  ----------*/
+    
+    footer{
+      flex-direction: column;
+      padding: 0;
+      margin: 80px 20px;
+      gap: 30px;
+    }
+  
+    .footer__column:nth-child(-n + 2){
+      width: 100%;
+    }
+   
   }

@@ -17,8 +17,10 @@
   :root {
     --main-blue: #0065fc;
     --light-blue: #deebff;
-    --grey: #f2f2f2;
-    --black: rgba(0, 0, 0, 1);
+    --light-grey: #f2f2f2;
+    --grey: #d9d9d9;
+    --black: #000000;
+    --white: #ffffff;
   }
   
   /* HEADER */
@@ -117,13 +119,13 @@
     justify-content: center;
     align-items: center;
     border-radius: 15px 0px 0px 15px;
-    border: 1px solid var(--grey);
-    background-color: var(--grey);
+    border: 1px solid var(--light-grey);
+    background-color: var(--light-grey);
   }
   
   .input-search input {
     font:  700 18px "Raleway", sans-serif;
-    border: 1px solid var(--grey);
+    border: 1px solid var(--light-grey);
     outline: none;
     width: 60%;
     padding-left: 17px;
@@ -135,7 +137,7 @@
   
   .search-bar--button {
     font:  700 18px "Raleway", sans-serif;
-    color: white;
+    color: var(--white);
     background: var(--main-blue);
     padding: 14px 16px 14px 16px;
     border: none;
@@ -182,6 +184,7 @@
     border: 2px solid var(--grey);
     border-radius: 25px;
     padding: 4px 20px;
+    background-color: var(--white);
   }
   
   .filter-bar__btn:active{
@@ -219,7 +222,7 @@
     width: 24px;
     height: 24px;
     border-radius: 1000px;
-    border: 1px solid var(--grey);
+    border: 1px solid var(--light-grey);
     margin-right: 11px;
   }
   
@@ -249,7 +252,7 @@
       (2 * (100% - 40px)) / 3
     ); /* Deux tiers de l'espace total moins 40px d'espacement */
     padding: 34px 44px 46px 36px;
-    background-color:var(--grey);
+    background-color:var(--light-grey);
     border-radius: 20px;
   }
   
@@ -259,8 +262,8 @@
   
   .card__main {
     width: calc(100% / 3);
-    border: 5px solid #ffffff;
-    background-color: white;
+    border: 5px solid var(--white);
+    background-color: var(--white);
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     cursor: pointer;
@@ -293,7 +296,7 @@
   }
 
   .stars__container--main .star-empty{
-    color: var(--grey);
+    color: var(--light-grey);
   }
 
   .card__description--main {
@@ -306,7 +309,7 @@
   }
   
   .card__main:hover {
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
   
   .card__main:active {
@@ -320,11 +323,12 @@
     padding: 0;
     border: none;
     cursor: pointer;
+    background-color: var(--light-grey);
   }
   
   .show-more__btn:hover {
     color: var(--main-blue);
-    background-color: white;
+    background-color: var(--white);
   }
   
   .first-row,
@@ -349,7 +353,7 @@
     ); /* Un tiers de l'espace total moins 40px d'espacement */
     margin-left: 40px;
     padding: 41px 40px 1px 37px;
-    background-color: var(--grey);
+    background-color: var(--light-grey);
     border-radius: 20px;
   }
   
@@ -357,6 +361,7 @@
     display: flex;
     flex-direction: column;
   }
+
   .offers__spensored h2 {
     margin-bottom: 26px;
   }
@@ -375,7 +380,7 @@
   
   .card__spensored {
     border-radius: 20px;
-    border: 5px solid #ffffff;
+    border: 5px solid var(--white);
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
   
@@ -485,8 +490,7 @@
     display: flex;
     padding: 45px 0px 24px 118px;
     margin-bottom: 27px;
-    background-color: var(--grey);
-    border-radius: 15px;
+    background-color: var(--light-grey);
   }
   
   footer h3 {
@@ -712,13 +716,22 @@
   
     .offers__spensored{
       width: 100%;
-      margin: 80px 0;
+      margin: 20px 0;
       padding: 0;
+      border-radius: 0px;
+      ;
     }
-  
+
+    .card__spensored--1,
+    .card__spensored--2,
+    .card__spensored--3{
+      background-color: var(--white);
+    }
+
     .offers__main{
       width: 100%;
       padding: 0;
+      background-color: var(--white);
     }
   
     .first-row , .second-row{
@@ -728,6 +741,10 @@
   
     .card__main{
       width: 100%;
+    }
+
+    .show-more__btn {
+      background-color: var(--white);
     }
   
     

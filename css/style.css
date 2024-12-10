@@ -61,10 +61,6 @@
     height: 100%;
     text-align: center;
   }
-
-  nav li a:active{
-    color: var(--main-blue);
-  }
   
   nav li a {
     text-decoration: none;
@@ -90,7 +86,7 @@
   
   }
   
-  /* Ligne animée sous les liens */
+
 nav li a::before {
   content: '';
   position: absolute;
@@ -104,11 +100,12 @@ nav li a::before {
 
 
 nav li a.pre-hover::before {
-  width: 100%;
+  width: 100%; /
 }
 
+
   nav li a.pre-hover {
-  color: var(--main-blue);
+  color: var(--main-blue); 
 
 }
 

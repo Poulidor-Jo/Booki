@@ -41,8 +41,8 @@
   }
   
   .nav__logo img {
-    width: 61.09px;
-    height: 19px;
+    width: 100px;
+    height: 30px;
   }
   
   nav ul {
@@ -100,7 +100,7 @@ nav li a::before {
 
 
 nav li a.pre-hover::before {
-  width: 100%; /
+  width: 100%; 
 }
 
 
@@ -282,22 +282,37 @@ nav li a.pre-hover::before {
     padding: 34px 44px 46px 36px;
     background-color:var(--light-grey);
     border-radius: 20px;
+    
   }
 
  
-  
   .offers__main h2 {
     margin-bottom: 23px;
   }
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; /* Permet d'espacer les cartes */
+}
   
   .card__main {
-    width: calc(100% / 3);
+    width: calc(33.333% - 20px);
     border: 5px solid var(--white);
     background-color: var(--white);
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    overflow: hidden;
   }
+
+  .card__main img {
+    width: 100%;
+    height: 124px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
   
   .card__main a {
     color: var(--black);
@@ -311,16 +326,29 @@ nav li a.pre-hover::before {
     height: 124px;
     object-fit: cover;
   }
+
+  .card__description--main h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  }
+
+
   .card__main h3 {
     font:  700 16px "Raleway", sans-serif;
   }
   .card__main p {
     font:  400 14px "Raleway", sans-serif;
   }
+
+  .card__description--main p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
   
   .stars__container--main i {
     color: var(--main-blue);
-    margin: -2px;
+    margin-right: 2px;
     font-size: 14px;
   }
 
@@ -329,13 +357,9 @@ nav li a.pre-hover::before {
   }
 
   .card__description--main {
-    padding: 4px 0px 6px 11px;
+    padding: 10px;
   }
   
-  .card__description--main > h3,
-  .card__description--main > p {
-    margin-bottom: 9px;
-  }
   
   .card__main:hover {
     box-shadow: 0px 3px 15px var(--black);
@@ -346,34 +370,24 @@ nav li a.pre-hover::before {
   }
   
   .show-more__btn {
-    font:  700 18px "Raleway", sans-serif;;
-    margin-top: 40px;
-    margin-left: 4px;
-    padding: 0;
-    border: none;
-    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
     background-color: var(--light-grey);
+    color: var(--black);
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
   }
   
   .show-more__btn:hover {
-    color: var(--main-blue);
-    background-color: var(--white);
-  }
+    background-color: var(--main-blue);
+    color: var(--white);
+}
   
-  .first-row,
-  .second-row {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .first-row {
-    margin-bottom: 30px;
-  }
-  
-  .card__main:nth-child(n + 1):nth-child(-n + 2) {
-    margin-right: 31px;
-  }
-  
+ 
   /* Les plus populaires */
   
   .offers__spensored {

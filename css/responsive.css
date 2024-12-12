@@ -131,7 +131,7 @@
     }
   
     nav li a:hover::before {
-      top: 100%;
+      bottom: 100%;
     }
 
     nav li a::before {
@@ -288,4 +288,7 @@
       justify-content: space-between;
     }
 
+    .footer__column {
+        width: 100%;
+    }
   }

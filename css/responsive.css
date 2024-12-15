@@ -2,7 +2,7 @@
   
   /*----------  Tablettes  ----------*/
   
-  @media (min-width: 769px) and (max-width: 992px) {
+  @media (min-width: 768px) and (max-width: 1024px) {
     /*----------  Header  ----------*/
   
     header {
@@ -37,14 +37,14 @@
     .offers__main,
     .offers__spensored {
       width: 100%;
-      margin: 20px 0px;
+      margin: 20px 20px;
       padding: 30px 40px 0px;
     }
 
     .show-more__btn {
-      margin-bottom: 40px;
+      margin-bottom: 20px; 
     }
-  
+
     .card__spensored--container{
       display: flex;
       flex-direction: row;
@@ -80,13 +80,13 @@
     /*----------  Activités  ----------*/
   
     .card_activity:nth-child(-n + 3) {
-      margin-right: 10px;
+      margin-right: 25px;
     }
     .activities img {
-      height: 130px;
+      height: 180px;
     }
     .activities h2 {
-      margin-bottom: 34px;
+      margin-bottom: 20px;
     }
   
   footer{
@@ -109,8 +109,9 @@
     /*----------  Header  ----------*/
   
     header {
-      margin: 10px;
+      margin: 0px;
     }
+
     nav {
       flex-direction: column;
       align-items: center;
@@ -149,6 +150,7 @@
     .search-bar__container {
       margin: 0px 20px;
     }
+
   
     .search-bar--button i {
       display: block;
@@ -227,7 +229,7 @@
 
     .offers__main{
       width: 100%;
-      padding: 0;
+      padding: 20px;
       background-color: var(--white);
       align-items: center;     
     }
@@ -244,14 +246,14 @@
 
     .show-more__btn {
       background-color: var(--white);
-      margin: 20px;
+      margin-top: 20px;
     }
   
     
     /*----------  Activités à marseille  ----------*/
     
     .activities{
-      margin: 80px 20px 0 20px;
+      margin: 30px 20px 0 20px;
     }
     .activities_row {
       display: flex;
@@ -264,7 +266,7 @@
     }
   
     .activities img{
-      height: 124px;
+      height: 120px;
     }
   
     

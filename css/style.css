@@ -8,7 +8,7 @@
   } 
   
   body {
-    max-width: 1400px;
+    max-width: 1440px;
     margin: 0 auto;
   }
   
@@ -279,7 +279,7 @@ nav li a.pre-hover::before {
     width: calc(
       (2 * (100% - 40px)) / 3
     ); /* Deux tiers de l'espace total moins 40px d'espacement */
-    padding: 34px 44px 46px 36px;
+    padding: 34px 44px 5px 36px;
     background-color:var(--light-grey);
     border-radius: 20px;
     
@@ -370,12 +370,12 @@ nav li a.pre-hover::before {
   }
   
   .show-more__btn {
-    display: block;
     margin: 20px auto;
-    padding: 10px 20px;
+    padding: 20px 20px;
     background-color: var(--light-grey);
     color: var(--black);
     font-weight: bold;
+    font-size: 18px;
     border: none;
     border-radius: 20px;
     cursor: pointer;

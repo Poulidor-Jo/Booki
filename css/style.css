@@ -79,7 +79,6 @@ nav li a:hover::before {
   width: 0%;
   height: 2px;
   position: absolute;
-  top: 1;
   left: 0;
   background-color: var(--main-blue);
   width: 100%;

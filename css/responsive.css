@@ -24,8 +24,11 @@
     }
   
     .filter-bar {
-      gap: 10px;
-    }
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px; 
+  }
   
     /*----------  Hébergements  ----------*/
   
@@ -51,7 +54,7 @@
     }
   
     .card__spensored img {
-      width: 50%;
+      width: 100%;
       display: flex;
     }
     
@@ -130,10 +133,6 @@
     nav ul li {
       width: 50%;
     }
-  
-    nav li a:hover::before {
-      bottom: 100%;
-    }
 
     nav li a::before {
         content: '';
@@ -144,9 +143,11 @@
         height: 2px;
         background-color: var(--main-blue);
         transition: width 0.3s ease;
+        bottom: -5px; /* Ligne en dessous */
+        top: auto; /* Supprime l'effet `top` au mobile */
       }
 
-  
+    
     .search-bar__container {
       margin: 0px 20px;
     }

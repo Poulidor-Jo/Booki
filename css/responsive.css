@@ -54,13 +54,13 @@
   }
   
   .card__spensored img {
-    width: 100%;
-     display: flex;
+    width: 50%;
+    display: flex;
   }
     
   
   .card__description--spensored {
-    padding: 16px 22px 0px 15px;
+    padding: 5px 0px 5px 15px
   
   }
   

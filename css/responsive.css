@@ -37,47 +37,63 @@
     margin: 20px;
   }
   
-  .offers__main,
-  .offers__spensored {
-    width: 100%;
-    margin: 20px 20px;
-    padding: 30px 40px 0px;
-  }
+.offers__main {
+  width: 100%;
+  margin: 20px 20px;
+  padding: 10px 15px 0px;
+}
 
-  .show-more__btn {
-    margin-bottom: 20px; 
-  }
+.cards-container {
+  gap: 15px;
+}
 
-  .card__spensored--container{
-    display: flex;
-    flex-direction: row;
-  }
+.card__main {
+  width: calc(33% - 10px);
+}
+
+.card__description--main h3 {
+  font-size: 16px;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}
+
+.show-more__btn {
+  margin-bottom: 20px; 
+}
+
+.offers__spensored {
+  width: 100%;
+  margin: 20px 20px;
+  padding: 10px 15px 0px;
+}
+.card__spensored--container{
+  display: flex;
+  flex-direction: row;
+}
   
-  .card__spensored img {
-    width: 50%;
-    display: flex;
-  }
+.card__spensored img {
+  width: 50%;
+   display: flex;
+}
     
   
   .card__description--spensored {
-    padding: 5px 0px 5px 15px
-  
+    padding: 5px 0px 5px 10px ;
   }
   
-  .card__spensored:nth-child(-n + 2) {
-    margin-right: 23px;
-  }
-  
-  .card__spensored:nth-child(-n + 3) {
-    flex: 1;
+  .card__spensored {
+    width: calc(
+    (2 * (100% - 40px)) / 3); 
+    margin: 10px;
   }
   
   .card__description--spensored h3 {
-    font-size: 14px;
+    font-size: 16px;
   }
    
   .card__description--spensored p {
-    font-size: 13px;
+    font-size: 14px;
   }
   
     /*----------  Activités  ----------*/

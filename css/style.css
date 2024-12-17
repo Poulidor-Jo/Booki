@@ -145,7 +145,7 @@ form {
   border: 1px solid var(--light-grey);
   outline: none;
   width: 60%;
-  padding-left: 17px;
+  padding-left: 10px;
 }
 
 .input-search input::placeholder {

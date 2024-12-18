@@ -3,7 +3,8 @@
 /*----------  Tablettes  ----------*/
   
 @media (min-width: 768px) and (max-width: 1024px) {
-    /*----------  Header  ----------*/
+    
+/*----------  Header  ----------*/
   
 header {
   margin: 0px 30px 37px 30px;
@@ -30,7 +31,7 @@ header {
   gap: 10px; 
 }
   
-    /*----------  Hébergements  ----------*/
+/*----------  Hébergements  ----------*/
   
 .offers {
   flex-wrap: wrap;
@@ -51,8 +52,6 @@ header {
   width: calc(33% - 10px);
 }
 
-
-
 .show-more__btn {
   margin-bottom: 20px; 
 }
@@ -65,11 +64,11 @@ header {
 .card__spensored--container{
   display: flex;
   flex-direction: row;
+  margin-left: 0px;
 }
   
 .card__spensored img {
-  
-  object-fit: cover; 
+  width: 60%;
 }
   
 .card__description--spensored {
@@ -83,7 +82,7 @@ header {
 }
   
   
-  /*----------  Activités  ----------*/
+/*----------  Activités  ----------*/
   
 .card_activity:nth-child(-n + 3) {
   margin-right: 25px;
@@ -111,184 +110,186 @@ gap: 30px;
 }
 }
   
-  /*----------  Téléphone mobile  ----------*/
+/*----------  Téléphone mobile  ----------*/
   
 @media (max-width: 768px) {
   
-  /*----------  Header  ----------*/
+/*----------  Header  ----------*/
   
-  header {
-      margin: 0px;
+ header {
+  margin: 0px;
+ }
+
+nav {
+flex-direction: column;
+align-items: center;
+}
+  
+.nav__logo {
+  margin-top: 21px;
+  margin-bottom: 38px;
+}
+  
+nav ul {
+  width: 100%;
+  height: 50px;
+}
+  
+nav ul li {
+  width: 50%;
+}
+
+nav li a::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--main-blue);
+  transition: width 0.3s ease;
+  bottom: -5px; /* Ligne en dessous */
+  top: auto; /* Supprime l'effet `top` au mobile */
+}
+
+    
+.search-bar__container {
+  margin: 0px 20px;
   }
 
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
+.search-bar--button i {
+  display: block;
+}
   
-  .nav__logo {
-    margin-top: 21px;
-    margin-bottom: 38px;
-  }
-  
-  nav ul {
-    width: 100%;
-    height: 50px;
-  }
-  
-  nav ul li {
-    width: 50%;
+.search-bar--button span {
+    display: none;
   }
 
-    nav li a::before {
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background-color: var(--main-blue);
-        transition: width 0.3s ease;
-        bottom: -5px; /* Ligne en dessous */
-        top: auto; /* Supprime l'effet `top` au mobile */
-      }
-
-    
-    .search-bar__container {
-      margin: 0px 20px;
-    }
+.search-bar--button {
+  border-radius: 20%;
+  box-shadow: 0px 2px 4px var(--black);
+}
+  
+.input-search {
+  width: 100%;
+}
 
   
-    .search-bar--button i {
-      display: block;
-    }
+.input-search input {
+  font-size: 16px;
+  width: 100%;
+  border-right: none;
+}
+    
+/*----------  Filter bar  ----------*/
   
-    .search-bar--button span {
-      display: none;
-    }
-
-    .search-bar--button {
-      border-radius: 20%;
-      box-shadow: 0px 2px 4px var(--black);
-    }
+.filter-bar {
+  margin-top: 34px;
+  gap: 15px;
+  flex-direction: column;
+  align-items: flex-start;
+}
   
-    .input-search {
-      width: 100%;
-    }
-
+.filter-bar__btns{
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 5%;
+  padding: 0;
+}
   
-    .input-search input {
-      font-size: 16px;
-      width: 100%;
-      border-right: none;
-    }
-    /*----------  Filter bar  ----------*/
-  
-    .filter-bar {
-      margin-top: 34px;
-      gap: 15px;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .filter-bar__btns{
-      flex-wrap: wrap;
-      row-gap: 20px;
-      column-gap: 5%;
-      padding: 0;
-    }
-  
-    .filter-bar__btn{
-      flex: 1 1 47%;
-      font-size: 14px;
-      justify-content: flex-start;
-      padding: 4px 16px;
-    }
+.filter-bar__btn{
+  flex: 1 1 47%;
+  font-size: 14px;
+  justify-content: flex-start;
+  padding: 4px 16px;
+}
   
     
-    /*----------  Hébergements  ----------*/
+/*----------  Hébergements  ----------*/
     
-    .offers {
-      flex-direction: column-reverse;
-      margin: 0px;
-    }
+.offers {
+  flex-direction: column-reverse;
+  margin: 0px;
+}
 
   
-    .offers__spensored{
-      width: 100%;
-      margin: 0;
-      margin-top: 20px;
-      margin-bottom: 30px;
-      padding: 20px;
-      border-radius: 0px;
-      box-sizing: border-box;  
-    }
+.offers__spensored{
+  width: 100%;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 0px;
+  box-sizing: border-box;  
+}
 
-    .card__spensored {
-      margin-bottom: 20px;
-      background-color: var(--white);
-    }
+.card__spensored {
+  margin-bottom: 20px;
+  background-color: var(--white);
+}
     
 
-    .offers__main{
-      width: 100%;
-      padding: 20px;
-      background-color: var(--white);
-      align-items: center;     
-    }
+.offers__main{
+  width: 100%;
+  padding: 20px;
+  background-color: var(--white);
+  align-items: center;     
+}
     
-    .offers__main h2 {
-      margin: 20px;
-    }
+.offers__main h2 {
+  margin: 20px;
+}
   
   
-    .card__main{
-      width: 100%;
-      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2)
-    }
+.card__main{
+  width: 100%;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2)
+}
 
-    .show-more__btn {
-      background-color: var(--white);
-      margin-top: 20px;
-    }
+.show-more__btn {
+  background-color: var(--white);
+  margin-top: 20px;
+}
   
     
-    /*----------  Activités à marseille  ----------*/
+/*----------  Activités à marseille  ----------*/
     
-    .activities{
-      margin: 30px 20px 0 20px;
-    }
-    .activities_row {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-    .card_activity{
-      width: 100%;
-      height:190px ;
-    }
-  
-    .activities img{
-      height: 120px;
-    }
-  
-    
-    /*----------  Footer  ----------*/
-    
-    footer{
-      flex-direction: column;
-      margin: 80px 0px 0px;
-      padding: 20px;
-      gap: 30px;
-    }
-  
-    .footer{
-      display: flex;
-      gap: 10px;
-      justify-content: space-between;
-    }
+.activities{
+  margin: 30px 20px 0 20px;
+}
 
-    .footer__column {
-        width: 100%;
-    }
+.activities_row {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card_activity{
+  width: 100%;
+  height:190px ;
+}
+  
+.activities img{
+  height: 120px;
+}
+  
+    
+/*----------  Footer  ----------*/
+    
+footer{
+  flex-direction: column;
+  margin: 80px 0px 0px;
+  padding: 20px;
+  gap: 30px;
+}
+  
+.footer{
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.footer__column {
+  width: 100%;
   }
+}

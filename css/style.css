@@ -435,8 +435,9 @@ font-weight: bold;
 }
 
 .card__spensored img {
-  width: 150px;
-  height: 150px;
+  width: 123px;
+  height: 140px;
+  max-height: 145px;
   border-radius: 15px 0px 0px 15px;
   object-fit: cover;
 }

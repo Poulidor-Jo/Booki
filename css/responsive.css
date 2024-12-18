@@ -68,8 +68,7 @@ header {
 }
   
 .card__spensored img {
-  width: 30%;
-  height: auto;
+  
   object-fit: cover; 
 }
   
